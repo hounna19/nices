@@ -8,7 +8,7 @@ binding = "SIREN"
 id = "0aee39e30b05439d8e08388305fd6a96"
 
 [build]
-command = "cargo install worker-build && worker-build --release"
+command = "RUSTFLAGS='-C target-feature=+reference-types' cargo install worker-build && worker-build --release"
 
 [env.dev]
 build = { command = "cargo install worker-build && worker-build --dev" }
